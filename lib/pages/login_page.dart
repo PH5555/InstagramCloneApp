@@ -52,7 +52,8 @@ class _LoginState extends State<Login> {
             hintStyle: TextStyle(fontSize: 16, color: Color(0xffbdbdbd)),
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8),
-              borderSide: BorderSide(width: 0, style: BorderStyle.none),
+              borderSide: BorderSide(
+                  width: 0, style: BorderStyle.none),
             ),
             filled: true,
             contentPadding: EdgeInsets.all(16),

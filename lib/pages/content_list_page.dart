@@ -7,7 +7,20 @@ class ContentList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      children: [InstagramContentItem(), InstagramContentItem()],
+      children: [
+        InstagramContentItem(
+            profileImg: "imgs/lion.png",
+            userName: "김동현",
+            content: "고양이 정말 귀여워용",
+            contentImg: "imgs/cat.png",
+            count: 100),
+        InstagramContentItem(
+            profileImg: "imgs/lion.png",
+            userName: "김동현",
+            content: "고양이 정말 귀여워용",
+            contentImg: "imgs/cat.png",
+            count: 100)
+      ],
     );
   }
 }
