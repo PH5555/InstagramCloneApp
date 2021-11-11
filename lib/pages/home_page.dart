@@ -11,8 +11,11 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   List<Widget> pages = [
     ContentList(),
-    Center(
-      child: Text("검색화면"),
+    Visibility(
+      visible: false,
+      child: Center(
+        child: Text("검색화면"),
+      ),
     ),
     Center(
       child: Text("영상화면"),

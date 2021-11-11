@@ -19,6 +19,7 @@ class InstagramContentItem extends StatefulWidget {
 
 class _InstagramContentItemState extends State<InstagramContentItem> {
   bool isCheck = false;
+
   Widget userInfo() {
     return Container(
       height: 50,
@@ -53,9 +54,137 @@ class _InstagramContentItemState extends State<InstagramContentItem> {
           Positioned(
             right: 10,
             top: 20,
-            child: Image.asset(
-              "imgs/menu.png",
-              width: 15,
+            child: InkWell(
+              onTap: () {
+                showModalBottomSheet(
+                    context: context,
+                    shape: RoundedRectangleBorder(
+                      borderRadius:
+                          BorderRadius.vertical(top: Radius.circular(25.0)),
+                    ),
+                    backgroundColor: Colors.white,
+                    useRootNavigator: true,
+                    builder: (context) {
+                      return Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          SizedBox(
+                            height: 49,
+                          ),
+                          Column(children: [
+                            Row(
+                              children: [
+                                SizedBox(
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.075,
+                                ),
+                                Container(
+                                  decoration: BoxDecoration(
+                                      color: Colors.grey[200],
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(10))),
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.27,
+                                  height: 70,
+                                ),
+                                SizedBox(
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.02,
+                                ),
+                                Container(
+                                  decoration: BoxDecoration(
+                                      color: Colors.grey[200],
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(10))),
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.27,
+                                  height: 70,
+                                ),
+                                SizedBox(
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.02,
+                                ),
+                                Container(
+                                  decoration: BoxDecoration(
+                                      color: Colors.grey[200],
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(10))),
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.27,
+                                  height: 70,
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Container(
+                              child: Center(
+                                child: Text(
+                                  "이 게시물이 표시되는 이유",
+                                  style: TextStyle(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w500),
+                                ),
+                              ),
+                              decoration: BoxDecoration(
+                                  color: Colors.grey[200],
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(10))),
+                              width: MediaQuery.of(context).size.width * 0.85,
+                              height: 40,
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Container(
+                              child: Center(
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Center(
+                                      child: Text(
+                                        "숨기기",
+                                        style: TextStyle(
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.w500),
+                                      ),
+                                    ),
+                                    Divider(
+                                        thickness: 1,
+                                        indent: 10,
+                                        color: Colors.grey[350],
+                                        endIndent: 10),
+                                    Center(
+                                      child: Text(
+                                        "팔로우 취소",
+                                        style: TextStyle(
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.w500),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              decoration: BoxDecoration(
+                                  color: Colors.grey[200],
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(10))),
+                              width: MediaQuery.of(context).size.width * 0.85,
+                              height: 80,
+                            ),
+                            SizedBox(
+                              height: 60,
+                            )
+                          ])
+                        ],
+                      );
+                    });
+              },
+              child: Image.asset(
+                "imgs/menu.png",
+                width: 15,
+              ),
             ),
           )
         ],
@@ -112,25 +241,15 @@ class _InstagramContentItemState extends State<InstagramContentItem> {
   }
 
   Widget like() {
-    return Padding(
-      padding: const EdgeInsets.only(left: 15, bottom: 8),
-      child: Container(
+    return Visibility(
+      visible: isCheck,
+      child: Padding(
+        padding: const EdgeInsets.only(left: 15, bottom: 8),
         child: Container(
-            child: RichText(
-          text: new TextSpan(
-              style: new TextStyle(fontSize: 15, color: Colors.black),
-              children: [
-                new TextSpan(
-                    text: "jaeho",
-                    style: new TextStyle(fontWeight: FontWeight.bold)),
-                new TextSpan(text: "님 외 "),
-                new TextSpan(
-                    text: widget.count.toString() + "명",
-                    style: new TextStyle(fontWeight: FontWeight.bold)),
-                new TextSpan(text: "이 좋아합니다")
-              ]),
-        )),
-        width: MediaQuery.of(context).size.width,
+          child: Text("좋아요 1개",
+              style: TextStyle(fontSize: 15, color: Colors.black)),
+          width: MediaQuery.of(context).size.width,
+        ),
       ),
     );
   }
