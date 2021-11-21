@@ -15,6 +15,14 @@
 - 4주차 : 홈화면 UI 구현 (Appbar, BottomNavigationBar)
 
     https://drive.google.com/drive/folders/1VMzyoZyp80MjoK4QJ0a85r1zbCoojWoT?usp=sharing
+    
+- 5주차 : 좋아요 로직 구현
+
+    https://drive.google.com/drive/folders/1uz8_4EtSihvEGikG6syz815ktP8xZNPE?usp=sharing
+    
+- 6주차 : 비동기 프로그래밍과 좋아요 로직 구현
+
+    https://drive.google.com/drive/folders/1Fhrzw1YxSA781kRO13xJsvZ2YWyh3wI-?usp=sharing
 
 
 
