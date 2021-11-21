@@ -246,7 +246,7 @@ class _InstagramContentItemState extends State<InstagramContentItem> {
       child: Padding(
         padding: const EdgeInsets.only(left: 15, bottom: 8),
         child: Container(
-          child: Text("좋아요 1개",
+          child: Text("좋아요 1,000,000,000개",
               style: TextStyle(fontSize: 15, color: Colors.black)),
           width: MediaQuery.of(context).size.width,
         ),

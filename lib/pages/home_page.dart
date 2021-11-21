@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:instagram_ex/pages/content_list_page.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -9,6 +11,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  PermissionStatus _permissionStatus = PermissionStatus.denied;
   List<Widget> pages = [
     ContentList(),
     Visibility(
@@ -34,43 +37,6 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.white,
-        appBar: AppBar(
-          automaticallyImplyLeading: false,
-          backgroundColor: Colors.white,
-          centerTitle: false,
-          title: Padding(
-            padding: const EdgeInsets.only(left: 10),
-            child: Image.asset(
-              "imgs/logo.png",
-              width: 120,
-            ),
-          ),
-          elevation: 0,
-          titleSpacing: 0,
-          actions: [
-            Padding(
-              padding: const EdgeInsets.only(left: 16, right: 16),
-              child: Image.asset(
-                'imgs/add.png',
-                width: 20,
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 16, right: 16),
-              child: Image.asset(
-                'imgs/heart.png',
-                width: 20,
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 16, right: 16),
-              child: Image.asset(
-                'imgs/send.png',
-                width: 20,
-              ),
-            ),
-          ],
-        ),
         body: pages[selectedIndex],
         bottomNavigationBar: BottomNavigationBar(
           backgroundColor: Colors.white,

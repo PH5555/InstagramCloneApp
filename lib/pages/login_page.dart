@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_ex/data/login_data.dart';
+import 'package:instagram_ex/pages.dart';
 import 'package:instagram_ex/pages/home_page.dart';
 
 class Login extends StatefulWidget {
@@ -52,8 +53,7 @@ class _LoginState extends State<Login> {
             hintStyle: TextStyle(fontSize: 16, color: Color(0xffbdbdbd)),
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8),
-              borderSide: BorderSide(
-                  width: 0, style: BorderStyle.none),
+              borderSide: BorderSide(width: 0, style: BorderStyle.none),
             ),
             filled: true,
             contentPadding: EdgeInsets.all(16),
@@ -220,6 +220,6 @@ class _LoginState extends State<Login> {
       return;
     }
 
-    Navigator.push(context, MaterialPageRoute(builder: (context) => Home()));
+    Navigator.push(context, MaterialPageRoute(builder: (context) => Pages()));
   }
 }

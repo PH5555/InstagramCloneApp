@@ -2,7 +2,8 @@
     package="com.example.instagram_ex">
    <application
         android:label="instagram_ex"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/ic_launcher"
+        >
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
