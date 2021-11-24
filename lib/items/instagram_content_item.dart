@@ -86,6 +86,17 @@ class _InstagramContentItemState extends State<InstagramContentItem> {
                                   width:
                                       MediaQuery.of(context).size.width * 0.27,
                                   height: 70,
+                                  child: Column(
+                                    children: [
+                                      SizedBox(height: 14),
+                                      Image.asset(
+                                        'imgs/share.png',
+                                        width: 25,
+                                      ),
+                                      SizedBox(height: 3),
+                                      Text('공유', style: TextStyle(fontSize: 12))
+                                    ],
+                                  ),
                                 ),
                                 SizedBox(
                                   width:
@@ -99,6 +110,17 @@ class _InstagramContentItemState extends State<InstagramContentItem> {
                                   width:
                                       MediaQuery.of(context).size.width * 0.27,
                                   height: 70,
+                                  child: Column(
+                                    children: [
+                                      SizedBox(height: 14),
+                                      Image.asset(
+                                        'imgs/link.png',
+                                        width: 25,
+                                      ),
+                                      SizedBox(height: 3),
+                                      Text('링크', style: TextStyle(fontSize: 12))
+                                    ],
+                                  ),
                                 ),
                                 SizedBox(
                                   width:
@@ -112,6 +134,19 @@ class _InstagramContentItemState extends State<InstagramContentItem> {
                                   width:
                                       MediaQuery.of(context).size.width * 0.27,
                                   height: 70,
+                                  child: Column(
+                                    children: [
+                                      SizedBox(height: 14),
+                                      Image.asset(
+                                        'imgs/report.png',
+                                        width: 25,
+                                      ),
+                                      SizedBox(height: 3),
+                                      Text('신고',
+                                          style: TextStyle(
+                                              fontSize: 12, color: Colors.red))
+                                    ],
+                                  ),
                                 ),
                               ],
                             ),
@@ -132,46 +167,49 @@ class _InstagramContentItemState extends State<InstagramContentItem> {
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(10))),
                               width: MediaQuery.of(context).size.width * 0.85,
-                              height: 40,
+                              height: 50,
                             ),
                             SizedBox(
                               height: 10,
                             ),
                             Container(
                               child: Center(
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Center(
-                                      child: Text(
-                                        "숨기기",
-                                        style: TextStyle(
-                                            fontSize: 14,
-                                            fontWeight: FontWeight.w500),
-                                      ),
-                                    ),
-                                    Divider(
-                                        thickness: 1,
-                                        indent: 10,
-                                        color: Colors.grey[350],
-                                        endIndent: 10),
-                                    Center(
-                                      child: Text(
-                                        "팔로우 취소",
-                                        style: TextStyle(
-                                            fontSize: 14,
-                                            fontWeight: FontWeight.w500),
-                                      ),
-                                    ),
-                                  ],
+                                child: Text(
+                                  "숨기기",
+                                  style: TextStyle(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w500),
                                 ),
                               ),
                               decoration: BoxDecoration(
                                   color: Colors.grey[200],
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(10))),
+                                  borderRadius: BorderRadius.only(
+                                      topLeft: Radius.circular(10),
+                                      topRight: Radius.circular(10))),
                               width: MediaQuery.of(context).size.width * 0.85,
-                              height: 80,
+                              height: 50,
+                            ),
+                            Container(
+                              width: MediaQuery.of(context).size.width * 0.85,
+                              color: Colors.grey[300],
+                              height: 1,
+                            ),
+                            Container(
+                              child: Center(
+                                child: Text(
+                                  "팔로우 취소",
+                                  style: TextStyle(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w500),
+                                ),
+                              ),
+                              decoration: BoxDecoration(
+                                  color: Colors.grey[200],
+                                  borderRadius: BorderRadius.only(
+                                      bottomLeft: Radius.circular(10),
+                                      bottomRight: Radius.circular(10))),
+                              width: MediaQuery.of(context).size.width * 0.85,
+                              height: 50,
                             ),
                             SizedBox(
                               height: 60,

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_ex/data/login_data.dart';
 import 'package:instagram_ex/pages.dart';
-import 'package:instagram_ex/pages/home_page.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
@@ -198,7 +198,7 @@ class _LoginState extends State<Login> {
         ]));
   }
 
-  void login() {
+  void login() async {
     if (idController.text.isEmpty) {
       ScaffoldMessenger.of(context)
           .showSnackBar(SnackBar(content: Text("아이디를 입력해주세요")));
@@ -219,6 +219,11 @@ class _LoginState extends State<Login> {
           .showSnackBar(SnackBar(content: Text("일치하는 비밀번호가 없습니다.")));
       return;
     }
+
+    // shared preferences 얻기
+    final prefs = await SharedPreferences.getInstance();
+    // 값 저장하기
+    prefs.setBool('login', true);
 
     Navigator.push(context, MaterialPageRoute(builder: (context) => Pages()));
   }

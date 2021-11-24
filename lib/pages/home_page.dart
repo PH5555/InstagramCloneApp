@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
 import 'package:instagram_ex/pages/content_list_page.dart';
-import 'package:permission_handler/permission_handler.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -11,7 +9,6 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  PermissionStatus _permissionStatus = PermissionStatus.denied;
   List<Widget> pages = [
     ContentList(),
     Visibility(
