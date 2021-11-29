@@ -23,6 +23,10 @@
 - 6주차 : 비동기 프로그래밍과 좋아요 로직 구현
 
     https://drive.google.com/drive/folders/1Fhrzw1YxSA781kRO13xJsvZ2YWyh3wI-?usp=sharing
+    
+- 7주차 : 로그인 기억 기능 구현(sharedPreference)
+
+    https://drive.google.com/drive/folders/1o3Z8THr8njXouGsp2s7U1xEngHAHz_bU?usp=sharing
 
 
 
