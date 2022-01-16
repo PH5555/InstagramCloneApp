@@ -29,4 +29,13 @@
     https://drive.google.com/drive/folders/1o3Z8THr8njXouGsp2s7U1xEngHAHz_bU?usp=sharing
 
 
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
+
+
+
+<p align="start"> 
+<img src="https://user-images.githubusercontent.com/47862506/149648758-b752b720-2bd1-40b3-b019-f2a1e7ea2bd3.png" alt="Sample signal" width="28%" height="40%">
+  <img src="https://user-images.githubusercontent.com/47862506/149648755-abe5390f-3c30-4e10-8acd-9d1b48b50c3e.png" alt="Sample signal" width="28%" height="40%">
+  <img src="https://user-images.githubusercontent.com/47862506/149648757-6902b44a-fd6f-41e4-9f08-1fce7eff311d.png" alt="Sample signal" width="28%" height="40%">
+</p>
