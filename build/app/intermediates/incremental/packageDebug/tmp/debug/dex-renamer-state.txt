@@ -1,4 +1,0 @@
-#Wed Nov 24 15:15:33 KST 2021
-base.0=/Users/kimdonghyeon/Documents/GitHub/InstagramCloneApp/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
-renamed.0=classes.dex
-path.0=classes.dex
